@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="MyFontsWebfontsKit/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>Index</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">M<span class="navbar-amp">&</span>V</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-3 mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-md-title" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-md-title" href="venues.html">Venues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-md-title" href="accomodation.html">Accomodation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-md-title" href="gifts.html">Gifts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-md-title" href="helpful-hints.html">Helpful Hints</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-md-title rsvp-button" href="#">RSVP</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li> -->
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+        <!-- <ul class="navbar-nav mr-0">
+          <li class="nav-item">
+            <a class="nav-link text-lg-title rsvp-button" href="#">RSVP</a>
+          </li>
+        </ul> -->
+      </div>
+    </nav>
+    <div class="banner">
+      <img class="banner-image" src="images/Couple.png" alt="">
+      <div class="banner-headings flex flex-center">
+        <div class="banner-heading">
+          <h1 class="forename">Matthew</h1>
+          <h2 class="othernames">Wood</h2>
+        </div>
+        <div class="banner-amp-container">
+          <h1 class="banner-amp">&amp;</h1>
+        </div>
+        <div class="banner-heading">
+          <h1 class="forename">Vanessa</h1>
+          <h2 class="othernames">Bowers</h2>
+        </div>
+      </div>
+      <div class="banner-subheadings">
+        <ul>
+          <li><h4 class="text-copy">Are getting married on</h4></li>
+          <li><h2 class="text-md-title"><span class="text-glyph">&#xe004;&nbsp;</span>Saturday 2nd June 2018<span class="text-glyph icon-flipped">&#xe004;&nbsp;</span></h2></li>
+        </ul>
+      </div>
+    </div>
+    <div id="rsvp" class="container-fluid px-0 fixed-bottom no-widget">
+      <h1 id="rsvp-button-tab" class="text-md-title form-title my-0 px-3 py-1 rsvp-button">RSVP</h1>
+      <form id="rsvp-form" method="post" action="rsvp.php" class="form px-3 form-hidden">
+        <p class="text-copy">Dear Matthew and Vanessa.</p>
+        <div class="form-inline">
+          <p class="text-copy">Thank you for your invititation to the</p>
+          <select class="form-replaced" name="invitationType">
+            <option class="filler">blank</option>
+            <option >ceremony</option>
+            <option >reception</option>
+            <option >ceremony & reception</option>
+          </select>
+          <div class="select mb-3" tabindex="0">
+            <span class="value">blank</span>
+            <ul class="optList hidden">
+              <li class="option filler">&nbsp;___________&nbsp;</li>
+              <li class="option">&nbsp;ceremony&nbsp;</li>
+              <li class="option">&nbsp;reception&nbsp;</li>
+              <li class="option">&nbsp;ceremony & reception&nbsp;</li>
+            </ul>
+          </div>
+          <p class="text-copy">I </p>
+          <select class="form-replaced" name="acceptReject">
+             <option class="filler">blank </option>
+             <option>will </option>
+             <option>will not</option>
+           </select>
+           <div class="select mb-3" tabindex="0">
+             <span class="value">blank</span>
+             <ul class=" optList hidden">
+               <li class="option filler">&nbsp;____&nbsp;</li>
+               <li class="option"><span class="filler">&nbsp;am happy to say that I</span> will&nbsp;</li>
+               <li class="option"><span class="filler">&nbsp;regret to say that I </span> will not&nbsp;</li>
+             </ul>
+           </div>
+           <p class="text-copy">be attending the event.&nbsp;</p>
+        </div>
+
+        <div class="form-inline">
+          <p class="text-copy">I will be bringing</p>
+          <select id="guestNumber" data-guest-amount="null" class="form-replaced" name="guestAmount">
+            <option class="filler">blank</option>
+            <option >no</option>
+            <option >one</option>
+            <option >two</option>
+            <option >three</option>
+            <option >four</option>
+            <option >five</option>
+          </select>
+          <div class="select mb-3" tabindex="0">
+            <span class="value">__</span>
+            <ul class="optList hidden">
+              <li class="option filler">&nbsp;__&nbsp;</li>
+              <li data-guestAmount="0" class="option guestNumber">&nbsp;no <span class="filler">guests.</span></li>
+              <li data-guestAmount="1" class="option guestNumber">&nbsp;one <span class="filler">guest.</span></li>
+              <li data-guestAmount="2" class="option guestNumber">&nbsp;two <span class="filler">guests.</span></li>
+              <li data-guestAmount="3" class="option guestNumber">&nbsp;three <span class="filler">guests.</span></li>
+              <li data-guestAmount="4" class="option guestNumber">&nbsp;four <span class="filler">guests.</span></li>
+              <li data-guestAmount="5" class="option guestNumber">&nbsp;five <span class="filler">guests.</span></li>
+            </ul>
+
+          </div>
+          <div id="guestSlots">
+            <input id="guest1" class="mb-3 text-input text-copy guest-hidden" type="text" name="guest1" placeholder="NAME"required>
+            <input id="guest2" class="mb-3 text-input text-copy guest-hidden" type="text" name="guest2" placeholder="NAME"required>
+            <input id="guest3" class="mb-3 text-input text-copy guest-hidden" type="text" name="guest3" placeholder="NAME"required>
+            <input id="guest4" class="mb-3 text-input text-copy guest-hidden" type="text" name="guest4" placeholder="NAME"required>
+            <input id="guest5" class="mb-3 text-input text-copy guest-hidden" type="text" name="guest5" placeholder="NAME"required>
+        </div>
+        <div class="form-inline">
+          <p class="text-copy">For meals, I will be having</p>
+          <select class="form-replaced" name="guestMeal">
+            <option class="filler">blank</option>
+            <option >Steak</option>
+            <option >Fish</option>
+            <option >Vegetarian</option>
+            <option >Vegan</option>
+          </select>
+          <div id="mealOption" class="select mb-3" tabindex="0">
+            <span class="value">____</span>
+            <ul class="optList hidden">
+              <li class="option filler mealOption">&nbsp;____&nbsp;</li>
+              <li class="option mealOption"><span class="filler">&nbsp;the</span>&nbsp;steak&nbsp;<span class="filler">option</span></li>
+              <li class="option mealOption"><span class="filler">&nbsp;the</span>&nbsp;fish&nbsp;<span class="filler">option</span></li>
+              <li class="option mealOption"><span class="filler">&nbsp;the</span>&nbsp;vegetarian&nbsp;<span class="filler">option</span></li>
+              <li class="option mealOption"><span class="filler">&nbsp;the</span>&nbsp;vegan&nbsp;<span class="filler">option</span></li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- <input id="name" class="text-input text-copy" type="text" name="name" placeholder="NAME"required> -->
+        <textarea class="text-input text-copy" name="message"></textarea>
+        <input type="submit">
+      </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/buttons.js">
+    </script>
+    <script type="text/javascript" src="scripts/formWidget.js"></script>
+    <script type="text/javascript" src="scripts/guestNumber.js"></script>
+  </body>
+</html>

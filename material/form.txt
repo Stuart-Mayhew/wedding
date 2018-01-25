@@ -1,0 +1,20 @@
+Info Needed:
+
+Name:
+Which event(s) they are attending:
+number of people attending:
+their names:
+their respective menu choices:
+
+In this format:
+
+
+Dear Matthew and Vanessa,
+
+Thank you for your invitation to the _____ I am ____ to say that i 
+_____ be attending the event(s).
+I will be bringing __ guest(s).
+[box for guest names].
+host will be having the ____.
+guest1 will be having the ____.
+etc.

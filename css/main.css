@@ -1,0 +1,444 @@
+/* break points */
+/* xs < 768px
+sm >= 768px
+md >= 992px
+lg >= 1200px */
+/* Font size rules */
+:root {
+  font-size: 16px;
+}
+.text-glyph {
+  font-family: LaVeroniqueTwo-Regular;
+  color: #82ABD1;
+  font-size: 0.8em;
+}
+.icon-flipped {
+  display: inline-block;
+  -moz-transform: scale(-1 , 1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+h1 {
+  font-size: 4.5rem;
+  font-family: LaVeroniqueOne-Regular;
+}
+.text-lg-title {
+  font-family: LaVeroniqueOne-Regular;
+}
+h2 {
+  font-size: 2.5rem;
+  font-family: LaVeroniqueSans-Regular;
+}
+.text-md-title {
+  font-family: LaVeroniqueSans-Regular;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+p, a, li {
+  font-size: 1rem;
+}
+.text-copy {
+  font-family: LaVeroniqueNotes-Regular;
+}
+sup {
+  vertical-align: super;
+  font-size: 0.75em;
+}
+.blue-title {
+  color: #82ABD1;
+}
+
+/* Flex rules */
+.flex {
+  display: flex;
+}
+.flex-space-between {
+  justify-content: space-between;
+}
+.flex-space-around {
+  justify-content: space-around;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-left {
+  align-items: flex-start;
+}
+.flex-right {
+  align-items: flex-end;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-align-center {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+/* Nav rules */
+nav  {
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  background-color: grey;
+}
+@media only screen and (max-width:450px) {
+  .navbar {
+    padding-left: 0;
+  }
+}
+
+.navbar-light .nav-link {
+  color: rgba(255,255,255,0.85)!important;
+}
+.navbar-light .active .nav-link {
+  color: rgba(255,255,255,1)!important;
+  font-size: 1.9rem;
+}
+.navbar-brand {
+  font-family: LaVeroniqueOne-Regular;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.9)!important;
+}
+.navbar-amp {
+  font-size: 1rem;
+  padding-left: 1px;
+}
+.bg-light{
+  background-color: #82ABD1!important;
+}
+.nav-link {
+  font-size: 1.8rem;
+}
+nav ul {
+  /* display: inline-block; */
+}
+nav ul li {
+  display: inline;
+}
+nav a {
+  padding: 0 1rem;
+}
+.nav-rsvp {
+  min-height: 48px;
+  display: inline-block;
+}
+
+/* Banner rules */
+.banner {
+  width: 100%;
+}
+.banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 769px) {
+  .banner-image {
+    width: auto;
+    height: 62vh;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .banner-image {
+    width: auto;
+    height: 62vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .banner-image {
+    width: auto;
+    height: 60vh;
+  }
+}
+
+.banner-headings {
+    border-bottom: 5px dotted #82ABD1;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+}
+.banner-subheadings {
+  width: 100%;
+  margin: 0.5rem auto;
+}
+.banner-subheadings h4 {
+  text-transform: lowercase;
+}
+.banner-heading {
+    margin-right: 0.75rem;
+    width: 100%;
+    overflow-y: visible;
+    min-height: 2.2rem;
+}
+.banner-amp-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.banner-amp {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 2.8rem;
+  color: white;
+  background-color: #82ABD1;
+  border-radius: 50%;
+
+  /* margin-top: 10px; */
+  margin: 10px 0 0 0;
+}
+@media only screen and (max-width: 450px) {
+  .text-md-title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .banner-heading .forename {
+    font-size: 2.5rem;
+  }
+  .banner-heading .othernames {
+    font-size: 2rem;
+  }
+  .form-title {
+    font-size: 2rem;
+  }
+  .banner-amp-container {
+    width: 48px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .banner-headings, .banner-subheadings {
+    width: 60%;
+    margin: 1rem auto;
+  }
+  .banner-heading {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .banner-headings, .banner-subheadings {
+    width: 45%;
+    margin: 1rem auto;
+  }
+  .banner-heading {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .banner-headings, .banner-subheadings {
+    width: 35%;
+    margin: 1rem auto;
+  }
+  .banner-heading {
+      margin-right: 0.5rem;
+  }
+  .form-title {
+    font-size: 4rem;
+  }
+}
+
+.banner-heading .forename {
+  margin: 0
+}
+.banner-heading .othernames {
+  margin: 0
+}
+.banner-headings .banner-heading {
+  text-align: center;
+}
+.othernames {
+  text-transform: uppercase;
+}
+
+.banner-subheadings ul li {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+}
+form {
+  background-color: #F2E4D4;
+}
+#rsvp-form {
+  transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
+  overflow: hidden;
+}
+.rsvp-button:hover {
+  cursor: pointer;
+}
+.form-title {
+  display: inline-block;
+  background-color: #F2E4D4;
+  border-radius: 0 15px 0 0;
+  position: relative;
+  top: 1px;
+}
+
+
+@media only screen and (max-width:1024px) {
+  body {
+    margin-bottom: 94px;
+  }
+}
+@media only screen and (max-width:768px) {
+  body {
+    margin-bottom: 50px;
+  }
+  .form-title {
+    display: block;
+    border-radius: 0;
+  }
+}
+
+
+
+.form-hidden {
+  height: 0;
+}
+.form-showing {
+  height: 200px;
+}
+
+textarea {
+  width: 100%;
+}
+/* widget classes */
+.select {
+  position: relative;
+  display: inline-block;
+  font-family: LaVeroniqueNotes-Regular;
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+  width: auto;
+  cursor: pointer;
+}
+/*.select:after {
+  content : "▼";*/ /* We use the unicode caracter U+25BC; see http://www.utf8-chartable.de */
+  /* position: absolute; */
+  /*z-index : 1;*/ /* This will be important to keep the arrow from overlapping the list of options */
+  /* top     : 0;
+  right   : 0;
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  height  : 100%;
+  width   : 2em;
+  padding-top : .1em;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+  text-align : center;
+} */
+
+.select.active,
+.select:focus {
+  outline: none;
+  box-shadow: 0;
+}
+.select .filler {
+  display: none;
+  visibility: hidden;
+}
+.select .value .filler {
+  display: inline-block;
+  visibility: visible;
+}
+.select .value {
+  display: inline-block;
+  width: auto;
+  overflow: hidden;
+  vertical-align: top;
+  white-space  : nowrap;
+  text-overflow: ellipsis;
+}
+.select .optList {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding : .1rem 2.5rem .2rem .5rem;
+  z-index : 2;
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  min-width : 100%;
+
+  max-height: 8em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border: .2em solid #000;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4); /* 0 2px 4px */
+  background: #f0f0f0;
+}
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+.select .option {
+  padding: .2em .3em;
+}
+.select .highlight {
+  background: #000;
+  color: #FFF;
+}
+.widget .form-replaced,
+.no-widget .select {
+  /* This CSS selector basically says:
+     - either we have set the body class to "widget" and thus we hide the actual <select> element
+     - or we have not changed the body class, therefore the body class is still "no-widget",
+       so the elements whose class is "select" must be hidden */
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+.text-input {
+  background-color: #F2E4D4;
+  border: none;
+  -webkit-appearance: none;
+  color: #000;
+  box-shadow: inset 0px 0px 0px 0px red;
+}
+.text-input:focus,
+.text-input:active {
+  border: none;
+  outline-width: 0;
+}
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+.guest-hidden {
+  visibility: hidden;
+  display: none;
+}
+.guest-showing {
+  visibility: visible;
+  display: inline-block;
+}

@@ -1,0 +1,23 @@
+Pages
+-----
+- Landing Page
+	- Picture
+	- Date
+	- Names
+	- RSVP form
+		- food options
+- Venues
+	- Ceremony
+	- Evening
+- Accomodation
+	- nearest hotels
+	- taxis
+- Gifts / Charities
+	- links to charities
+	- instructions for on the day
+- Helpful Hints
+	- Parking
+	- Travel
+	- La Prateria
+	- Footwear
+	- Helpful People

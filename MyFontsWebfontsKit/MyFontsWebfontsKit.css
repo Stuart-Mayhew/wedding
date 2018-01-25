@@ -1,0 +1,69 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3498700, 2017-12-15T10:57:18-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: LaVeroniqueNotes-Bold by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/bold/
+ * Copyright: Copyright &#x00A9; 2016 by Elena Genova. All rights reserved.
+ *
+ * Webfont: LaVeroniqueNotes-BoldItalic by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/bold-italic/
+ * Copyright: Copyright &#x00A9; 2016 by Elena Genova. All rights reserved.
+ *
+ * Webfont: LaVeroniqueNotes-Regular by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/notes/
+ * Copyright: Copyright &#x00A9; 2016 by Elena Genova. All rights reserved.
+ *
+ * Webfont: LaVeroniqueNotes-Italic by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/notes-italic/
+ * Copyright: Copyright &#x00A9; 2016 by Elena Genova. All rights reserved.
+ *
+ * Webfont: LaVeroniqueSans-Regular by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/sans/
+ * Copyright: Copyright &#x00A9; 2016 by Elena Genova. All rights reserved.
+ *
+ * Webfont: LaVeroniqueOne-Regular by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/one/
+ * Copyright: Elena Genova, 2015
+ *
+ * Webfont: LaVeroniqueTwo-Regular by My Creative Land
+ * URL: https://www.myfonts.com/fonts/my-creative-land/la-veronique/two/
+ * Copyright: Copyright &#x00A9; 2016 by Elena Genova. All rights reserved.
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3498700
+ * Licensed pageviews: 10,000
+ *
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("http://hello.myfonts.net/count/3562cc");
+
+
+@font-face {font-family: 'LaVeroniqueNotes-Bold';src: url('webfonts/3562CC_0_0.eot');src: url('webfonts/3562CC_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_0_0.woff2') format('woff2'),url('webfonts/3562CC_0_0.woff') format('woff'),url('webfonts/3562CC_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'LaVeroniqueNotes-BoldItalic';src: url('webfonts/3562CC_1_0.eot');src: url('webfonts/3562CC_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_1_0.woff2') format('woff2'),url('webfonts/3562CC_1_0.woff') format('woff'),url('webfonts/3562CC_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'LaVeroniqueNotes-Regular';src: url('webfonts/3562CC_2_0.eot');src: url('webfonts/3562CC_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_2_0.woff2') format('woff2'),url('webfonts/3562CC_2_0.woff') format('woff'),url('webfonts/3562CC_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'LaVeroniqueNotes-Italic';src: url('webfonts/3562CC_3_0.eot');src: url('webfonts/3562CC_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_3_0.woff2') format('woff2'),url('webfonts/3562CC_3_0.woff') format('woff'),url('webfonts/3562CC_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'LaVeroniqueSans-Regular';src: url('webfonts/3562CC_4_0.eot');src: url('webfonts/3562CC_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_4_0.woff2') format('woff2'),url('webfonts/3562CC_4_0.woff') format('woff'),url('webfonts/3562CC_4_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'LaVeroniqueOne-Regular';src: url('webfonts/3562CC_5_0.eot');src: url('webfonts/3562CC_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_5_0.woff2') format('woff2'),url('webfonts/3562CC_5_0.woff') format('woff'),url('webfonts/3562CC_5_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'LaVeroniqueTwo-Regular';src: url('webfonts/3562CC_6_0.eot');src: url('webfonts/3562CC_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3562CC_6_0.woff2') format('woff2'),url('webfonts/3562CC_6_0.woff') format('woff'),url('webfonts/3562CC_6_0.ttf') format('truetype');}
