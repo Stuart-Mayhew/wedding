@@ -8,7 +8,7 @@
   display: block;
   background: url('../images/pin-invert.png') no-repeat center center;
   background-size: contain;
-  transition: all 0.5s cubic-bezier(0.59, 0.92, 0.58, 1)
+  transition: all 0.5s cubic-bezier(0.59, 0.92, 0.58, 1);
 }
 .pin:hover,
 .pin:active,

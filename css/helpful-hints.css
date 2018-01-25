@@ -1,0 +1,31 @@
+.faq-content {
+  transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
+
+}
+.faq-content > * {
+  position: relative;
+  transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
+  bottom: 0;
+}
+.faq-showing {
+  overflow: hidden;
+  height: 200px;
+}
+.faq-showing {
+  bottom: 0;
+}
+.faq-hidden {
+  height: 0;
+  overflow: hidden;
+}
+.faq-hidden > * {
+  bottom: 200px;
+}
+.faq-button {
+  border-bottom: 5px dotted #82ABD1;
+}
+.faq-button img {
+  height: 2rem;
+  width: auto;
+  padding-bottom: 0.5rem;
+}
