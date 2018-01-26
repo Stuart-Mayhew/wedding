@@ -33,11 +33,11 @@
   height: 100%;
 }
 .banner-image-container {
-  width: 100%;
+  height: 100%;
 }
 .banner-img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 .banner-img img {
@@ -75,6 +75,12 @@
   }
   .desktop-only {
     display: flex;
+  }
+  .banner-image-container img {
+    height: 50vh;
+    width: auto;
+    margin: auto;
+    display: block;
   }
 }
 
