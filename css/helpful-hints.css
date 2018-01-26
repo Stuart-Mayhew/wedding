@@ -10,10 +10,6 @@
 
 }
 
-.split-list li {
-  display: inline;
-
-}
 .faq-category {
   display: flex;
   flex-direction: column;
@@ -31,6 +27,15 @@
 .faq-content p {
   margin-bottom: 0.25rem;
 }
+.faq-content ul {
+  margin-bottom: 0.25rem;
+}
+ul.split-list{
+  margin: 0;
+}
+.split-list li {
+  display: inline;
+}
 .faq-content {
   transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
   display: flex;
@@ -47,18 +52,32 @@
   overflow: hidden;
   bottom: 0;
 }
-.faq-showing.faq-xs {
-  height: 105px
+
+.faq-showing#taxi-content {
+  height: 79px;
 }
-.faq-showing.faq-sm {
-  height: 140px
+.faq-showing#parking-content {
+  height: 373px;
 }
-.faq-showing.faq-md {
-  height: 260px;
+.faq-showing#alt-travel-content {
+  height: 202px;
 }
-.faq-showing.faq-lg {
-  height: 420px;
+.faq-showing#accommodation-content {
+  height: 272px;
 }
+.faq-showing#prat-content {
+  height: 100px;
+}
+.faq-showing#footwear-content {
+  height: 142px;
+}
+.faq-showing#people-content {
+  height: 358px;
+}
+.faq-showing#faq-rsvp-content {
+  height: 58px;
+}
+
 .faq-hidden {
   height: 0;
   overflow: hidden;
@@ -85,29 +104,6 @@
   }
   .column {
     width: 100%;
-    padding: 0.5rem;
-  }
-  .faq-showing.faq-xs {
-    height: 90px
-  }
-  .faq-showing.faq-sm {
-    height: 120px
-  }
-  .faq-showing.faq-md {
-    height: 300px;
-  }
-  .faq-showing.faq-lg {
-    height: 410px;
-  }
-}
-
-@media only screen and (min-width: 450px) {
-  .faq-category h1 {
-    width: 75%;
-    padding: 1rem 1rem 0;
-  }
-  .column {
-    width: 100%;
     padding: 0;
   }
   .faq-button {
@@ -116,17 +112,29 @@
   .faq-content {
     width: 300px;
   }
-  .faq-showing.faq-xs {
-    height: 90px
+  .faq-showing#taxi-content {
+    height: 88px;
   }
-  .faq-showing.faq-sm {
-    height: 120px
+  .faq-showing#parking-content {
+    height: 544px;
   }
-  .faq-showing.faq-md {
-    height: 300px;
+  .faq-showing#alt-travel-content {
+    height: 280px;
   }
-  .faq-showing.faq-lg {
-    height: 410px;
+  .faq-showing#accommodation-content {
+    height: 356px;
+  }
+  .faq-showing#prat-content {
+    height: 136px;
+  }
+  .faq-showing#footwear-content {
+    height: 184px;
+  }
+  .faq-showing#people-content {
+    height: 424px;
+  }
+  .faq-showing#faq-rsvp-content {
+    height: 64px;
   }
 }
 
@@ -143,17 +151,29 @@
   .faq-category h1 {
     width: 90%;
   }
-  .faq-showing.faq-xs {
-    height: 90px
+  .faq-showing#taxi-content {
+    height: 88px;
   }
-  .faq-showing.faq-sm {
-    height: 120px
+  .faq-showing#parking-content {
+    height: 376px;
   }
-  .faq-showing.faq-md {
-    height: 240px;
+  .faq-showing#alt-travel-content {
+    height: 208px;
   }
-  .faq-showing.faq-lg {
-    height: 380px;
+  .faq-showing#accommodation-content {
+    height: 332px;
+  }
+  .faq-showing#prat-content {
+    height: 88px;
+  }
+  .faq-showing#footwear-content {
+    height: 136px;
+  }
+  .faq-showing#people-content {
+    height: 400px;
+  }
+  .faq-showing#faq-rsvp-content {
+    height: 64px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -173,33 +193,57 @@
   .faq-category h1 {
     width: 90%;
   }
-  .faq-showing.faq-xs {
-    height: 90px
+  .faq-showing#taxi-content {
+    height: 88px;
   }
-  .faq-showing.faq-sm {
-    height: 120px
+  .faq-showing#parking-content {
+    height: 496px;
   }
-  .faq-showing.faq-md {
-    height: 250px;
+  .faq-showing#alt-travel-content {
+    height: 280px;
   }
-  .faq-showing.faq-lg {
-    height: 420px;
+  .faq-showing#accommodation-content {
+    height: 332px;
+  }
+  .faq-showing#prat-content {
+    height: 136px;
+  }
+  .faq-showing#footwear-content {
+    height: 184px;
+  }
+  .faq-showing#people-content {
+    height: 424px;
+  }
+  .faq-showing#faq-rsvp-content {
+    height: 64px;
   }
 }
 @media only screen and (min-width:1200px) {
   .faq-content {
     width: 400px;
 }
-  .faq-showing.faq-xs {
-    height: 90px
+  .faq-showing#taxi-content {
+    height: 88px;
   }
-  .faq-showing.faq-sm {
-    height: 120px
-  }
-  .faq-showing.faq-md {
-    height: 250px;
-  }
-  .faq-showing.faq-lg {
+  .faq-showing#parking-content {
     height: 400px;
+  }
+  .faq-showing#alt-travel-content {
+    height: 208px;
+  }
+  .faq-showing#accommodation-content {
+    height: 260px;
+  }
+  .faq-showing#prat-content {
+    height: 112px;
+  }
+  .faq-showing#footwear-content {
+    height: 136px;
+  }
+  .faq-showing#faq-people {
+    height: 400px;
+  }
+  .faq-showing#faq-rsvp-content {
+    height: 64px;
   }
 }
