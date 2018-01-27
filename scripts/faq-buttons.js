@@ -9,15 +9,26 @@ var faqButton;
     }, false);
   } else if (faqButtons.attachEvent) {
     faqButtons.attachEvent('onclick', function(){
-      faqButton = buttons.id;
+      faqButton = faqButtons.id;
       faqButtonClick()
     });
   };
 });
 
 function faqButtonClick() {
+  // console.log(faqButtons[0].classList);
   var contentTitle = document.getElementById(faqButton);
   var content = contentTitle.nextElementSibling.classList;
+  for (var i = 0; i < faqButtons.length; i++) {
+    var faqContent = faqButtons[i].nextElementSibling.classList;
+
+
+    if (faqContent.contains('faq-showing') && faqButtons[i].id !== faqButton) {
+      console.log(faqButtons[i].id);
+      console.log(faqButton);
+      faqContent.replace('faq-showing', 'faq-hidden');
+    };
+  };
   if (content.contains('faq-showing')) {
     content.replace('faq-showing', 'faq-hidden');
   } else if (content.contains('faq-hidden')) {

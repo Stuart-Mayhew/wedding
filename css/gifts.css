@@ -1,0 +1,46 @@
+.gifts-title {
+  text-align: center;
+}
+.gifts-copy {
+  text-align: center;
+}
+.charity-container {
+  flex-direction: column;
+}
+.charity {
+  width: 100%;
+
+}
+.charity-img-link {
+  width: 75%;
+  margin: auto;
+}
+.charity-img {
+  width: 100%;
+}
+
+@media only screen and (min-width:769px) {
+  .charity-container {
+    flex-direction: row;
+  }
+  .charity-img-link {
+    width: 75%;
+    margin: auto;
+  }
+  .charity-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .charity-img-link {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width:1300px) {
+  .charity-img-link {
+    width: 50%;
+    margin: auto;
+  }
+}
