@@ -184,3 +184,28 @@ window.addEventListener('load', function () {
     });
   });
 });
+
+window.addEventListener('load', function () {
+  var selectList = document.querySelectorAll('.select');
+
+  // Each custom widget needs to be initialized
+  selectList.forEach(function (select) {
+    var optionList = select.querySelectorAll('.option'),
+        selectedIndex = getIndex(select);
+    // We make our custom widget focusable
+    select.tabIndex = 0;
+
+    // We make the native widget no longer focusable
+    select.previousElementSibling.tabIndex = -1;
+
+    // We make sure that the default selected value is correctly displayed
+    updateValue(select, selectedIndex);
+
+    // Each time a user click on an option, we update the value accordingly
+    optionList.forEach(function (option, index) {
+      option.addEventListener('click', function (event) {
+        updateValue(select, index);
+      });
+    });
+  });
+});

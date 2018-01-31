@@ -23,3 +23,124 @@ function buttonClick() {
     rsvpForm.classList.replace('form-showing','form-hidden')
   };
 };
+
+var plusButtons = document.getElementsByClassName('glyph-plus');
+var plusButton;
+
+[].forEach.call(plusButtons, function(plusButtons) {
+  if (plusButtons.addEventListener) {
+    plusButtons.addEventListener('click', function(){
+      plusButton = plusButtons.id;
+      plusButtonClick()
+    }, false);
+  } else if (plusButtons.attachEvent) {
+    plusButtons.attachEvent('onclick', function(){
+      plusButton = plusButtons.id;
+      plusButtonClick()
+    });
+  };
+});
+
+function plusButtonClick() {
+  var clicked = document.getElementById(plusButton);
+  var clickedParent = clicked.parentNode;
+  var inputContainer = clickedParent.previousElementSibling;
+  var divParent = inputContainer.parentNode;
+  var newDiv = inputContainer.cloneNode(false);
+  var newFirstName = document.createElement('input');
+  var newLastName = document.createElement('input')
+  console.log(divParent);
+  if (divParent.id === 'rsvp-names') {
+    newDiv.appendChild(newFirstName);
+    newFirstName.setAttribute('class', 'text-input text-copy first-name');
+    newFirstName.setAttribute('placeholder', 'First Name');
+    newFirstName.setAttribute('type', 'text');
+    newDiv.appendChild(newLastName);
+    newLastName.setAttribute('class', 'text-input text-copy last-name');
+    newLastName.setAttribute('placeholder', 'Last Name');
+    newLastName.setAttribute('type', 'text');
+    newDiv.appendChild(newLastName);
+    newLastName.setAttribute('class', 'text-input text-copy last-name')
+    newLastName.setAttribute('placeholder', 'Last Name')
+    newLastName.setAttribute('type', 'text')
+  } else if (divParent.id === 'rsvp-meat') {
+    newDiv.insertAdjacentHTML('beforeend', '<divclass="input-container"><select id="guestNumber" data-guest-amount="null" class="form-replaced" name="meat"><option class="filler">blank</option><option >guest1</option><option >guest2</option><option >guest3</option><option >guest4</option><option >guest5</option><option >guest6</option></select><div class="select" tabindex="0"><span class="value">__</span><ul class="optList hidden"><li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li><li data-guestAmount="1" class="option guestNumber">guest1</li><li data-guestAmount="1" class="option guestNumber">guest2</li><li data-guestAmount="1" class="option guestNumber">guest3</li><li data-guestAmount="1" class="option guestNumber">guest4</li><li data-guestAmount="1" class="option guestNumber">guest5</li><li data-guestAmount="1" class="option guestNumber">guest6</li></ul></div></div>');
+  }
+
+  if (divParent.getElementsByClassName('input-container').length <= 5) {
+    divParent.insertBefore(newDiv, clickedParent);
+
+  }
+}
+
+var minusButtons = document.getElementsByClassName('glyph-minus');
+var minusButton;
+
+[].forEach.call(minusButtons, function(minusButtons) {
+  if (minusButtons.addEventListener) {
+    minusButtons.addEventListener('click', function(){
+      minusButton = minusButtons.id;
+      minusButtonClick()
+    }, false);
+  } else if (minusButtons.attachEvent) {
+    minusButtons.attachEvent('onclick', function(){
+      minusButton = minusButtons.id;
+      minusButtonClick()
+    });
+  };
+});
+
+function minusButtonClick() {
+  var clicked = document.getElementById(minusButton);
+  var clickedParent = clicked.parentNode;
+  var inputContainer = clickedParent.previousElementSibling;
+  var newDiv = inputContainer.cloneNode([true]);
+  var divParent = inputContainer.parentNode;
+  var divNumber = inputContainer.childNodes.length
+
+  if (divNumber < 5) {
+  divParent.removeChild(inputContainer);
+  }
+}
+
+
+var mealGen = document.getElementById('meal-gen');
+
+if (mealGen.addEventListener) {
+  mealGen.addEventListener('click', function(){
+    mealGenClick()
+  }, false);
+} else if (mealGen.attachEvent) {
+  mealGen.attachEvent('onclick', function(){
+    mealGenClick()
+  });
+};
+
+function mealGenClick() {
+
+  var initGen = mealGen.nextElementSibling.classList;
+  if (initGen.contains('form-hidden')) {
+    initGen.replace('form-hidden', 'meal-form-showing');
+  }
+  var names = document.getElementsByClassName('name-container');
+
+
+  for (var i = 0; i < names.length  ; i++) {
+    var getFirstName = names[i].getElementsByClassName('first-name')[0]
+
+    var getLastName = names[i].getElementsByClassName('last-name')[0]
+    var mealForm = document.getElementsByClassName('meal-form');
+    var mealNames = document.getElementsByClassName('meal-name')
+    while (mealNames.length < document.getElementsByClassName('name-container').length) {
+      var newMealDiv = mealForm[0].cloneNode(true);
+      mealForm[0].parentNode.append(newMealDiv);
+    }
+    while (mealNames.length > document.getElementsByClassName('name-container').length) {
+      var lastMealName = mealForm[mealForm.length - 1];
+      mealForm[0].parentNode.removeChild(lastMealName);
+    }
+
+    var mealName = mealNames[i];
+    mealName.innerHTML = getFirstName.value + ' ' + getLastName.value;
+  }
+};

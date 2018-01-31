@@ -54,25 +54,25 @@ ul.split-list{
 }
 
 .faq-showing#taxi-content {
-  height: 79px;
+  height: 82px;
 }
 .faq-showing#parking-content {
-  height: 373px;
+  height: 442px;
 }
 .faq-showing#alt-travel-content {
-  height: 202px;
+  height: 226px;
 }
 .faq-showing#accommodation-content {
-  height: 272px;
+  height: 302px;
 }
 .faq-showing#prat-content {
-  height: 100px;
+  height: 106px;
 }
 .faq-showing#footwear-content {
-  height: 142px;
+  height: 154px;
 }
 .faq-showing#people-content {
-  height: 358px;
+  height: 394px;
 }
 .faq-showing#faq-rsvp-content {
   height: 58px;

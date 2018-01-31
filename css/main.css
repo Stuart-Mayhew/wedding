@@ -15,15 +15,30 @@ lg >= 1200px */
 .glyph-lg {
   font-size: 1.5rem;
   margin: 0;
+}
+.glyph-xl {
+  font-size: 3rem;
+  margin: 0;
   position: relative;
   top: 0.5rem;
+  display: inline-block;
+  height: 2.5rem;
 }
+
 .icon-flipped {
   display: inline-block;
   -moz-transform: scale(-1 , 1);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
+}
+.icon-flipped-y {
+  display: inline-block;
+  -moz-transform: scale(1 , -1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+  padding-top: 0.5rem;
 }
 h1 {
   font-size: 4.5rem;
@@ -317,6 +332,30 @@ form {
 .form-inline p {
   margin-bottom: 0;
 }
+.input-container {
+  display: inline-block;
+  vertical-align: top;
+}
+.plus-minus-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 2rem;
+}
+.glyph-plus,
+.glyph-minus,
+.glyph-gen {
+  padding: 0 0.5rem;
+  height: 2.5rem;
+  font-size: 4rem;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  bottom: 2.25rem;
+}
+.value {
+  font-size: 1.5rem;
+}
 #rsvp-form {
   padding-top: 1rem;
   transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
@@ -360,7 +399,9 @@ form {
 }
 .form-showing {
   height: 450px;
-
+}
+.meal-form-showing {
+  height: auto;
 }
 @media only screen and (max-width: 768px) {
   .form-showing {
@@ -433,11 +474,11 @@ textarea {
   visibility: hidden;
 }
 .select .value .filler {
-  display: inline-block;
+  display: inline;
   visibility: visible;
 }
 .select .value {
-  display: inline-block;
+  display: inline;
   width: auto;
   overflow: hidden;
   vertical-align: top;
@@ -498,7 +539,10 @@ textarea {
   -webkit-appearance: none;
   color: #000;
   box-shadow: inset 0px 0px 0px 0px red;
-  margin: 0.5rem 0;
+  margin: 0 0.25rem 0.5rem 0;
+}
+.original-input {
+  margin: 0
 }
 .text-input:focus,
 .text-input:active {
@@ -516,4 +560,11 @@ textarea {
 .guest-showing {
   visibility: visible;
   display: inline-block;
+}
+#meal-gen {
+  background-color: #82ABD1;
+  display: inline-block;
+}
+.meal-option {
+
 }
