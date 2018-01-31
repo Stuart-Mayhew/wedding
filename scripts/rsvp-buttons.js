@@ -131,9 +131,21 @@ function mealGenClick() {
     var getLastName = names[i].getElementsByClassName('last-name')[0]
     var mealForm = document.getElementsByClassName('meal-form');
     var mealNames = document.getElementsByClassName('meal-name')
-    while (mealNames.length < document.getElementsByClassName('name-container').length) {
+    while (mealNames.length < names.length) {
       var newMealDiv = mealForm[0].cloneNode(true);
+      var newRadio = newMealDiv.getElementsByClassName('meal-input')
+      console.log(newRadio);
+      for (var n = 0; n < newRadio.length; n++) {
+        var mealAttribute = mealNames.length + 1;
+        console.log(mealAttribute);
+        newRadio[0].setAttribute('name','meal' + mealAttribute);
+        newRadio[1].setAttribute('name','meal' + mealAttribute);
+
+      }
+
+
       mealForm[0].parentNode.append(newMealDiv);
+
     }
     while (mealNames.length > document.getElementsByClassName('name-container').length) {
       var lastMealName = mealForm[mealForm.length - 1];
