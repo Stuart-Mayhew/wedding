@@ -18,9 +18,13 @@ var button;
 function buttonClick() {
   var rsvpForm = document.getElementById('rsvp-form')
   if (rsvpForm.classList.contains('form-hidden')) {
-  rsvpForm.classList.replace('form-hidden','form-showing');
+  // rsvpForm.classList.replace('form-hidden','form-showing');
+  rsvpForm.classList.remove('form-hidden');
+  rsvpForm.classList.add('form-showing');
 } else if (rsvpForm.classList.contains('form-showing')) {
-    rsvpForm.classList.replace('form-showing','form-hidden')
+    // rsvpForm.classList.replace('form-showing','form-hidden')
+    rsvpForm.classList.remove('form-showing');
+    rsvpForm.classList.add('form-hidden');
   };
 };
 
@@ -49,7 +53,6 @@ function plusButtonClick() {
   var newDiv = inputContainer.cloneNode(false);
   var newFirstName = document.createElement('input');
   var newLastName = document.createElement('input')
-  console.log(divParent);
   if (divParent.id === 'rsvp-names') {
     newDiv.appendChild(newFirstName);
     newFirstName.setAttribute('class', 'text-input text-copy first-name');
@@ -118,9 +121,12 @@ if (mealGen.addEventListener) {
 
 function mealGenClick() {
 
-  var initGen = mealGen.nextElementSibling.classList;
-  if (initGen.contains('form-hidden')) {
-    initGen.replace('form-hidden', 'meal-form-showing');
+  var initGen = document.getElementById('rsvp-meal');
+
+  if (initGen.classList.contains('form-hidden')) {
+    initGen.classList.add('meal-form-showing');
+    initGen.classList.remove('-form-hidden');
+    // initGen.classList.replace('form-hidden', 'meal-form-showing');
   }
   var names = document.getElementsByClassName('name-container');
 
@@ -134,17 +140,16 @@ function mealGenClick() {
     while (mealNames.length < names.length) {
       var newMealDiv = mealForm[0].cloneNode(true);
       var newRadio = newMealDiv.getElementsByClassName('meal-input')
-      console.log(newRadio);
+
       for (var n = 0; n < newRadio.length; n++) {
         var mealAttribute = mealNames.length + 1;
-        console.log(mealAttribute);
         newRadio[0].setAttribute('name','meal' + mealAttribute);
         newRadio[1].setAttribute('name','meal' + mealAttribute);
 
       }
 
 
-      mealForm[0].parentNode.append(newMealDiv);
+      mealForm[0].parentNode.appendChild(newMealDiv);
 
     }
     while (mealNames.length > document.getElementsByClassName('name-container').length) {
