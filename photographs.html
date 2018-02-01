@@ -60,8 +60,8 @@
             <input class="text-input text-copy original-input last-name" placeholder="Last Name" type="text">
           </div>
           <div id="name-plus-minus-container" class="plus-minus-container">
-            <i id="name-plus" class="text-glyph glyph-plus">+</i>
-            <i id="name-minus" class="text-glyph glyph-minus">-</i>
+            <i id="name-plus-alt" class="text-copy glyph-plus button">Add&nbsp;Guest</i>
+            <i id="name-minus-alt" class="text-copy glyph-minus button">Remove&nbsp;Guest</i>
           </div>
 
         </div>
@@ -77,7 +77,7 @@
            <div class="select" tabindex="0">
              <span class="value">blank</span>
              <ul class="optList hidden">
-               <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
+               <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#xe00A;</span></li>
                <li class="option">Yes</li>
                <li class="option">No</li>
              </ul>
@@ -98,7 +98,7 @@
           <div class="select " tabindex="0">
             <span class="value">blank</span>
             <ul class="optList hidden">
-              <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
+              <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#xe00A;</span></li>
               <li class="option">Ceremony.</li>
               <li class="option">Evening.</li>
             </ul>
@@ -116,7 +116,7 @@
            <div class="select" tabindex="0">
              <span class="value">blank</span>
              <ul class="optList hidden">
-               <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
+               <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#xe00A;</span></li>
                <li class="option">Yes</li>
                <li class="option">No</li>
              </ul>
@@ -125,7 +125,7 @@
 
         <div class="form">
           <p class="text-copy">There will be two options for meals; a meat dish and a vegetarian dish.<br>Please select each invitee's preference.</p>
-          <p class="text-copy" id="meal-gen">Generate</p>
+          <i class="text-copy glyph-gen button" id="meal-gen">Generate List</i>
           <div id="rsvp-meal" class="form-hidden meal-form">
             <div id="rsvp-meat" class="meal-name text-copy">
               <p class="text-copy">Guest 1</p>
@@ -139,7 +139,8 @@
           </div>
         </div>
 
-          <p class="text-copy">Please also include next to the respective name any dietry requirements that person has that we need to be aware of.</p>
+        <p class="text-copy">Please also include any dietry requirements that we need to be aware of with the name(s) of the respective invitee(s) below.</p>
+        <textarea class="text-input text-copy" name="diet" placeholder="Name of invitee(s) with dietry requirement(s)"></textarea>
 
 
 
