@@ -367,6 +367,7 @@ form {
 
 #rsvp-form {
   transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
+  padding-top: 0.5rem;
 }
 #rsvp-form:first-child {
   margin-top: 1rem;
