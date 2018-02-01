@@ -366,8 +366,10 @@ form {
 
 
 #rsvp-form {
-  padding-top: 2rem;
   transition: all 1s cubic-bezier(0.59, 0.92, 0.58, 1);
+}
+#rsvp-form:first-child {
+  margin-top: 1rem;
 }
 .rsvp-button:hover {
   cursor: pointer;
@@ -425,15 +427,15 @@ form {
   font-size: 32px;
   box-shadow: none;
   border: none;
-  border-radius: 2px;
+  border-radius: 0.25rem;
   display: block;
   margin-bottom: 1rem;
   margin-top: 0.5rem;
+  height: 55px;
 }
 .submitButton:active,
 .submitButton:focus,
 .submitButton:hover {
-  color: white;
 }
 
 textarea {
