@@ -159,5 +159,8 @@ function mealGenClick() {
 
     var mealName = mealNames[i];
     mealName.innerHTML = getFirstName.value + ' ' + getLastName.value;
+    if (mealName.innerHTML == ' ') {
+      alert('Please ensure that there are no name fields left blank at the top of the form and click on "Generate List" again.');
+    }
   }
 };
