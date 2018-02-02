@@ -340,8 +340,16 @@ form {
 
 }
 .name-container {
-  width: 290px;
-  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+
+}
+@media only screen and (min-width: 330px) {
+  .name-container {
+    flex-direction: row;
+    width: 290px;
+    display: flex;
+  }
 }
 .original-container
 .plus-minus-container {

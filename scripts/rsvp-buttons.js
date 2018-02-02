@@ -51,21 +51,12 @@ function plusButtonClick() {
   var inputContainer = clickedParent.previousElementSibling;
   var divParent = inputContainer.parentNode;
   var newDiv = inputContainer.cloneNode(false);
-  var newFirstName = document.createElement('input');
-  var newLastName = document.createElement('input')
+  var newName = document.createElement('input');
   if (divParent.id === 'rsvp-names') {
-    newDiv.appendChild(newFirstName);
-    newFirstName.setAttribute('class', 'text-input text-copy first-name');
-    newFirstName.setAttribute('placeholder', 'First Name');
-    newFirstName.setAttribute('type', 'text');
-    newDiv.appendChild(newLastName);
-    newLastName.setAttribute('class', 'text-input text-copy last-name');
-    newLastName.setAttribute('placeholder', 'Last Name');
-    newLastName.setAttribute('type', 'text');
-    newDiv.appendChild(newLastName);
-    newLastName.setAttribute('class', 'text-input text-copy last-name')
-    newLastName.setAttribute('placeholder', 'Last Name')
-    newLastName.setAttribute('type', 'text')
+    newDiv.appendChild(newName);
+    newName.setAttribute('class', 'text-input text-copy name');
+    newName.setAttribute('placeholder', 'Full Name');
+    newName.setAttribute('type', 'text');
   } else if (divParent.id === 'rsvp-meat') {
     newDiv.insertAdjacentHTML('beforeend', '<divclass="input-container"><select id="guestNumber" data-guest-amount="null" class="form-replaced" name="meat"><option class="filler">blank</option><option >guest1</option><option >guest2</option><option >guest3</option><option >guest4</option><option >guest5</option><option >guest6</option></select><div class="select" tabindex="0"><span class="value">__</span><ul class="optList hidden"><li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li><li data-guestAmount="1" class="option guestNumber">guest1</li><li data-guestAmount="1" class="option guestNumber">guest2</li><li data-guestAmount="1" class="option guestNumber">guest3</li><li data-guestAmount="1" class="option guestNumber">guest4</li><li data-guestAmount="1" class="option guestNumber">guest5</li><li data-guestAmount="1" class="option guestNumber">guest6</li></ul></div></div>');
   }
@@ -132,9 +123,7 @@ function mealGenClick() {
 
 
   for (var i = 0; i < names.length  ; i++) {
-    var getFirstName = names[i].getElementsByClassName('first-name')[0]
-
-    var getLastName = names[i].getElementsByClassName('last-name')[0]
+    var getName = names[i].getElementsByClassName('name')[0]
     var mealForm = document.getElementsByClassName('meal-form');
     var mealNames = document.getElementsByClassName('meal-name')
     while (mealNames.length < names.length) {
@@ -158,7 +147,7 @@ function mealGenClick() {
     }
 
     var mealName = mealNames[i];
-    mealName.innerHTML = getFirstName.value + ' ' + getLastName.value;
+    mealName.innerHTML = getName.value;
     if (mealName.innerHTML == ' ') {
       alert('Please ensure that there are no name fields left blank at the top of the form and click on "Generate List" again.');
     }
