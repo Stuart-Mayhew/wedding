@@ -92,7 +92,7 @@ function minusButtonClick() {
   var divParent = inputContainer.parentNode;
   var divNumber = inputContainer.childNodes.length
 
-  if (divNumber < 5) {
+  if (divNumber < 3) {
   divParent.removeChild(inputContainer);
   }
 }
@@ -113,19 +113,20 @@ if (mealGen.addEventListener) {
 function mealGenClick() {
 
   var initGen = document.getElementById('rsvp-meal');
+  var names = document.getElementsByClassName('name-container');
+  var mealForm = document.getElementsByClassName('meal-form');
+  var mealNames = document.getElementsByClassName('meal-name')
 
   if (initGen.classList.contains('form-hidden')) {
     initGen.classList.add('meal-form-showing');
-    initGen.classList.remove('-form-hidden');
+    initGen.classList.remove('form-hidden');
     // initGen.classList.replace('form-hidden', 'meal-form-showing');
   }
-  var names = document.getElementsByClassName('name-container');
 
 
   for (var i = 0; i < names.length  ; i++) {
     var getName = names[i].getElementsByClassName('name')[0]
-    var mealForm = document.getElementsByClassName('meal-form');
-    var mealNames = document.getElementsByClassName('meal-name')
+
     while (mealNames.length < names.length) {
       var newMealDiv = mealForm[0].cloneNode(true);
       var newRadio = newMealDiv.getElementsByClassName('meal-input')
@@ -148,8 +149,101 @@ function mealGenClick() {
 
     var mealName = mealNames[i];
     mealName.innerHTML = getName.value;
-    if (mealName.innerHTML == ' ') {
-      alert('Please ensure that there are no name fields left blank at the top of the form and click on "Generate List" again.');
+    if (mealName.innerHTML == '') {
+      var nameField = i + 1;
+      alert('Please ensure that name field ' + nameField + ' has not been left blank at the top of the form. If there are too many name fields showing, click on "Remove Guest" and click on "Generate List" again.');
+      mealForm[i].classList.remove('meal-form-showing');
+      mealForm[i].classList.add('form-hidden');
+    } else if (mealForm[i].classList.contains('form-hidden')) {
+      mealForm[i].classList.remove('form-hidden');
     }
   }
 };
+
+var notAttend = document.getElementById('not-attend');
+var yesAttend = document.getElementById('yes-attend');
+
+if (notAttend.addEventListener) {
+  notAttend.addEventListener('click', function(){
+  notAttendClick()
+  }, false);
+} else if (notAttend.attachEvent) {
+  notAttend.attachEvent('onclick', function(){
+  notAttendClick()
+  });
+};
+
+function notAttendClick() {
+  var formClass = document.getElementsByClassName('form')
+  for (var i = 3; i < formClass.length; i++ ) {
+    document.getElementById('invite-type').innerHTML = '&#x2026;'
+    if (formClass[i].classList.contains('form-hidden')) {
+    } else {
+      formClass[i].classList.add('form-hidden');
+    };
+  }
+}
+
+if (yesAttend.addEventListener) {
+  yesAttend.addEventListener('click', function(){
+  yesAttendClick()
+  }, false);
+} else if (yesAttend.attachEvent) {
+  yesAttend.attachEvent('onclick', function(){
+  yesAttendClick()
+  });
+};
+
+function yesAttendClick() {
+  var formClass = document.getElementsByClassName('form')
+  for (var i = 3; i < formClass.length; i++ ) {
+    if (document.getElementById('invite-type').innerHTML === 'Evening.') {
+        i = i + 1;
+    } else if (formClass[i].classList.contains('form-hidden')) {
+      formClass[i].classList.remove('form-hidden');
+    };
+  }
+}
+
+
+var ceremonyAttend = document.getElementById('ceremony-attend');
+var eveningAttend = document.getElementById('evening-attend');
+
+if (ceremonyAttend.addEventListener) {
+  ceremonyAttend.addEventListener('click', function(){
+  ceremonyAttendClick()
+  }, false);
+} else if (ceremonyAttend.attachEvent) {
+  ceremonyAttend.attachEvent('onclick', function(){
+  ceremonyAttendClick()
+  });
+};
+
+function eveningAttendClick() {
+  var formClass = document.getElementsByClassName('form')
+  for (var i = 4; i < formClass.length; i++ ) {
+    if (formClass[i].classList.contains('form-hidden')) {
+    } else {
+      formClass[i].classList.add('form-hidden');
+    };
+  }
+}
+
+if (eveningAttend.addEventListener) {
+  eveningAttend.addEventListener('click', function(){
+  eveningAttendClick()
+  }, false);
+} else if (eveningAttend.attachEvent) {
+  eveningAttend.attachEvent('onclick', function(){
+  eveningAttendClick()
+  });
+};
+
+function ceremonyAttendClick() {
+  var formClass = document.getElementsByClassName('form')
+  for (var i = 3; i < formClass.length; i++ ) {
+    if (formClass[i].classList.contains('form-hidden')) {
+      formClass[i].classList.remove('form-hidden');
+    };
+  }
+}

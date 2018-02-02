@@ -58,7 +58,7 @@
         <div id="rsvp-names" class="form">
           <p class="text-copy">Name(s) of Invitee(s):</p>
           <div class="input-container name-container">
-            <input class="text-input text-copy original-input name" placeholder="Full Name" type="text">
+            <input class="text-input text-copy original-input name" placeholder="Full Name" type="text" required>
           </div>
           <div id="name-plus-minus-container" class="plus-minus-container">
             <i id="name-plus-alt" class="text-copy glyph-plus button">Add&nbsp;Guest</i>
@@ -79,8 +79,8 @@
              <span class="value">blank</span>
              <ul class="optList hidden">
                <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
-               <li class="option">Yes</li>
-               <li class="option">No</li>
+               <li id="yes-attend" class="option">Yes</li>
+               <li id="not-attend" class="option">No</li>
              </ul>
            </div>
 
@@ -97,18 +97,17 @@
             <option >evening</option>
           </select>
           <div class="select " tabindex="0">
-            <span class="value">blank</span>
+            <span id="invite-type" class="value">blank</span>
             <ul class="optList hidden">
               <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
-              <li class="option">Ceremony.</li>
-              <li class="option">Evening.</li>
+              <li id="ceremony-attend" class="option">Ceremony.</li>
+              <li id="evening-attend"class="option">Evening.</li>
             </ul>
           </div>
-
-          <p class="text-copy">Will You Need Transport From the Ceremony to The Field?</p>
         </div>
 
         <div class="form">
+          <p class="text-copy">Will You Need Transport From the Ceremony to The Field?</p>
           <select class="form-replaced" name="guestTransport">
              <option class="filler">blank</option>
              <option>Yes</option>
@@ -140,8 +139,11 @@
           </div>
         </div>
 
-        <p class="text-copy">Please also include any dietry requirements that we need to be aware of with the name(s) of the respective invitee(s) below.</p>
-        <textarea class="text-input text-copy" name="diet" placeholder="Name of invitee(s) with dietry requirement(s)"></textarea>
+        <div class="form">
+          <p class="text-copy">Please also include any dietry requirements that we need to be aware of with the name(s) of the respective invitee(s) below.</p>
+          <textarea class="text-input text-copy" name="diet" placeholder="Name of invitee(s) with dietry requirement(s)"></textarea>
+        </div>
+
 
 
 
