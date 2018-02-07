@@ -1,3 +1,15 @@
+var originalNameInput = document.getElementById('original-name-input');
+
+if (originalNameInput.addEventListener) {
+  originalNameInput.addEventListener('change', function(){
+    newNameGen()
+  }, false);
+} else if (originalNameInput.attachEvent) {
+  originalNameInput.attachEvent('change', function(){
+    newNameGen()
+  });
+};
+
 var buttons = document.getElementsByClassName('rsvp-button');
 var button;
 
@@ -57,6 +69,16 @@ function plusButtonClick() {
     newName.setAttribute('class', 'text-input text-copy name');
     newName.setAttribute('placeholder', 'Full Name');
     newName.setAttribute('type', 'text');
+
+    if (newName.addEventListener) {
+      newName.addEventListener('change', function(){
+        newNameGen()
+      }, false);
+    } else if (newName.attachEvent) {
+      newName.attachEvent('change', function(){
+        newNameGen()
+      });
+    };
   } else if (divParent.id === 'rsvp-meat') {
     newDiv.insertAdjacentHTML('beforeend', '<divclass="input-container"><select id="guestNumber" data-guest-amount="null" class="form-replaced" name="meat"><option class="filler">blank</option><option >guest1</option><option >guest2</option><option >guest3</option><option >guest4</option><option >guest5</option><option >guest6</option></select><div class="select" tabindex="0"><span class="value">__</span><ul class="optList hidden"><li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li><li data-guestAmount="1" class="option guestNumber">guest1</li><li data-guestAmount="1" class="option guestNumber">guest2</li><li data-guestAmount="1" class="option guestNumber">guest3</li><li data-guestAmount="1" class="option guestNumber">guest4</li><li data-guestAmount="1" class="option guestNumber">guest5</li><li data-guestAmount="1" class="option guestNumber">guest6</li></ul></div></div>');
   }
@@ -66,7 +88,9 @@ function plusButtonClick() {
 
   }
 }
-
+// function newNameGen() {
+//   alert('name change')
+// }
 var minusButtons = document.getElementsByClassName('glyph-minus');
 var minusButton;
 
@@ -90,27 +114,33 @@ function minusButtonClick() {
   var inputContainer = clickedParent.previousElementSibling;
   var newDiv = inputContainer.cloneNode([true]);
   var divParent = inputContainer.parentNode;
-  var divNumber = inputContainer.childNodes.length
-
+  var divNumber = inputContainer.childNodes.length;
+  var mealParent = divParent.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+  var meals = document.getElementsByClassName('meal-form');
+  var lastMeal = meals.length - 1;
   if (divNumber < 3) {
+    if (meals.length >= divParent.childNodes.length - 6) {
+      mealParent.removeChild(meals[lastMeal]);
+    }
   divParent.removeChild(inputContainer);
+
   }
 }
 
 
-var mealGen = document.getElementById('meal-gen');
+// var mealGen = document.getElementById('meal-gen');
+//
+// if (mealGen.addEventListener) {
+//   mealGen.addEventListener('click', function(){
+//     mealGenClick()
+//   }, false);
+// } else if (mealGen.attachEvent) {
+//   mealGen.attachEvent('onclick', function(){
+//     mealGenClick()
+//   });
+// };
 
-if (mealGen.addEventListener) {
-  mealGen.addEventListener('click', function(){
-    mealGenClick()
-  }, false);
-} else if (mealGen.attachEvent) {
-  mealGen.attachEvent('onclick', function(){
-    mealGenClick()
-  });
-};
-
-function mealGenClick() {
+function newNameGen() {
 
   var initGen = document.getElementById('rsvp-meal');
   var names = document.getElementsByClassName('name-container');
@@ -137,26 +167,24 @@ function mealGenClick() {
         newRadio[1].setAttribute('name','meal' + mealAttribute);
 
       }
-
-
       mealForm[0].parentNode.appendChild(newMealDiv);
-
     }
     while (mealNames.length > document.getElementsByClassName('name-container').length) {
       var lastMealName = mealForm[mealForm.length - 1];
       mealForm[0].parentNode.removeChild(lastMealName);
     }
-
     var mealName = mealNames[i];
+
     mealName.innerHTML = getName.value;
+    // console.log(mealName.parentNode.parentNode.childNodes[i+4])
     if (mealName.innerHTML == '') {
       var nameField = i + 1;
-      alert('Please ensure that name field ' + nameField + ' has not been left blank at the top of the form. If there are too many name fields showing, click on "Remove Guest" and click on "Generate List" again.');
       mealForm[i].classList.remove('meal-form-showing');
       mealForm[i].classList.add('form-hidden');
     } else if (mealForm[i].classList.contains('form-hidden')) {
       mealForm[i].classList.remove('form-hidden');
     }
+
   }
 };
 

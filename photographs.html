@@ -54,11 +54,11 @@
     <div id="rsvp" class="container-fluid px-0 fixed-bottom no-widget">
       <h2 id="rsvp-button-tab" class="text-md-title fixed-bottom form-title my-0 px-3 py-1 rsvp-button">RSVP</h2>
       <div class="form-top-bar"></div>
-      <form id="rsvp-form" method="post" class="form px-3 form-hidden">
+      <form id="rsvp-form" action="createRSVP" method="post" class="form px-3 form-hidden">
         <div id="rsvp-names" class="form">
           <p class="text-copy">Name(s) of Invitee(s):</p>
           <div class="input-container name-container">
-            <input class="text-input text-copy original-input name" placeholder="Full Name" type="text" required>
+            <input id="original-name-input" class="text-input text-copy original-input name" name="name" placeholder="Full Name" type="text" required>
           </div>
           <div id="name-plus-minus-container" class="plus-minus-container">
             <i id="name-plus-alt" class="text-copy glyph-plus button">Add&nbsp;Guest</i>
@@ -124,8 +124,7 @@
         </div>
 
         <div class="form">
-          <p class="text-copy">There will be two options for meals; a meat dish and a vegetarian dish.<br>Please select each invitee's preference.</p>
-          <i class="text-copy glyph-gen button" id="meal-gen">Generate List</i>
+          <p class="text-copy">Please select each invitee's preference for meals.</p>
           <div id="rsvp-meal" class="form-hidden meal-form">
             <div id="rsvp-meat" class="meal-name text-copy">
               <p class="text-copy">Guest 1</p>
@@ -140,8 +139,8 @@
         </div>
 
         <div class="form">
-          <p class="text-copy">Please also include any dietry requirements that we need to be aware of with the name(s) of the respective invitee(s) below.</p>
-          <textarea class="text-input text-copy" name="diet" placeholder="Name of invitee(s) with dietry requirement(s)"></textarea>
+          <p class="text-copy">Please also include any food allergies that we need to be aware of with the name(s) of the respective invitee(s) below.</p>
+          <textarea class="text-input text-copy" name="diet" placeholder="Please include allergy information here."></textarea>
         </div>
 
 

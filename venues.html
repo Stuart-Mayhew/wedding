@@ -49,7 +49,7 @@
           <a class="image-cover" href="https://www.google.co.uk/maps/dir//Parish+of+Great+Chesham,+57+Church+St,+Chesham+HP5+1HY/@51.7042527,-0.6186426,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4876679df4433b1b:0xf0a99f5ce064a572!2m2!1d-0.6158711!2d51.7042307!3e0" target="_blank"></a>
         </div>
         <div class="banner-image-container">
-          <a class="banner-img" href="https://www.google.co.uk/maps/dir//137+White+Hill,+Chesham+HP5+1AR/@51.7084784,-0.6055761,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x48765d11ee2618bb:0xa9e098b1c9a08fce!2m2!1d-0.6033874!2d51.7084751!3e0" target="_blank"><img  src="images/map.png"></a>
+          <a class="banner-img" href="https://www.google.co.uk/maps/dir//'51.708385,-0.603757'/@51.7069364,-0.6065395,16.25z/data=!4m7!4m6!1m0!1m3!2m2!1d-0.603757!2d51.708385!3e0" target="_blank"><img  src="images/map.png"></a>
         </div>
       </div>
 
@@ -73,7 +73,7 @@
             <h2 class="othernames">THE FIELD AT RYE HOUSE,</br>137 WHITE HILL, CHESHAM,</br>HP5 1AR</h2>
           </div>
           <div>
-            <a class="pin" href="https://www.google.co.uk/maps/dir//137+White+Hill,+Chesham+HP5+1AR/@51.7084784,-0.6055761,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x48765d11ee2618bb:0xa9e098b1c9a08fce!2m2!1d-0.6033874!2d51.7084751!3e0" target="_blank"><!--<img class="pin" src="images/pin.png">--></a>
+            <a class="pin" href="https://www.google.co.uk/maps/dir//'51.708385,-0.603757'/@51.7069364,-0.6065395,16.25z/data=!4m7!4m6!1m0!1m3!2m2!1d-0.603757!2d51.708385!3e0" target="_blank"><!--<img class="pin" src="images/pin.png">--></a>
           </div>
 
           <ul class="mobile-only no-border">
@@ -95,19 +95,48 @@
           </div>
         </div>
       </div>
-
-
     </div>
 
 
-
     <div id="rsvp" class="container-fluid px-0 fixed-bottom no-widget">
-      <h2 id="rsvp-button-tab" class="text-md-title form-title my-0 px-3 py-1 rsvp-button">RSVP</h2>
-      <form id="rsvp-form" method="post" class="form px-3 form-hidden">
-        <p class="text-copy">Dear Matthew and Vanessa.</p>
+      <h2 id="rsvp-button-tab" class="text-md-title fixed-bottom form-title my-0 px-3 py-1 rsvp-button">RSVP</h2>
+      <div class="form-top-bar"></div>
+      <form id="rsvp-form" action="createRSVP" method="post" class="form px-3 form-hidden">
+        <div id="rsvp-names" class="form">
+          <p class="text-copy">Name(s) of Invitee(s):</p>
+          <div class="input-container name-container">
+            <input id="original-name-input" class="text-input text-copy original-input name" name="name" placeholder="Full Name" type="text" required>
+          </div>
+          <div id="name-plus-minus-container" class="plus-minus-container">
+            <i id="name-plus-alt" class="text-copy glyph-plus button">Add&nbsp;Guest</i>
+            <i id="name-minus-alt" class="text-copy glyph-minus button">Remove&nbsp;Guest</i>
+          </div>
 
-        <div class="form-inline">
-          <p class="text-copy">Thank you for your invititation to the</p>
+        </div>
+        <div class="form">
+
+          <p class="text-copy">Are you able to attend?</p>
+
+          <select class="form-replaced" name="attendance">
+             <option class="filler">blank</option>
+             <option>Yes</option>
+             <option>No</option>
+           </select>
+           <div class="select" tabindex="0">
+             <span class="value">blank</span>
+             <ul class="optList hidden">
+               <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
+               <li id="yes-attend" class="option">Yes</li>
+               <li id="not-attend" class="option">No</li>
+             </ul>
+           </div>
+
+
+
+        </div>
+
+        <div class="form">
+          <p class="text-copy">Type of Invitation.</p>
 
           <select class="form-replaced" name="invitationType">
             <option class="filler">blank</option>
@@ -115,83 +144,63 @@
             <option >evening</option>
           </select>
           <div class="select " tabindex="0">
-            <span class="value">blank</span>
+            <span id="invite-type" class="value">blank</span>
             <ul class="optList hidden">
-              <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
-              <li class="option">&nbsp;ceremony.&nbsp;</li>
-              <li class="option">&nbsp;evening.&nbsp;</li>
+              <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
+              <li id="ceremony-attend" class="option">Ceremony.</li>
+              <li id="evening-attend"class="option">Evening.</li>
             </ul>
           </div>
-
-          <p class="text-copy">I/We </p>
-
-          <select class="form-replaced" name="acceptReject">
-             <option class="filler">blank</option>
-             <option>will</option>
-             <option>will not</option>
-           </select>
-           <div class="select" tabindex="0">
-             <span class="value">blank</span>
-             <ul class="optList hidden">
-               <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
-               <li class="option"><span class="filler">&nbsp;am/are happy to say that I/we</span> will&nbsp;</li>
-               <li class="option"><span class="filler">&nbsp;regret to say that I/we </span> will not&nbsp;</li>
-             </ul>
-           </div>
-
-           <p class="text-copy">be attending the event.&nbsp;</p>
-
         </div>
 
-        <div class="form-inline">
-          <p class="text-copy">I/We </p>
-
+        <div class="form">
+          <p class="text-copy">Will You Need Transport From the Ceremony to The Field?</p>
           <select class="form-replaced" name="guestTransport">
              <option class="filler">blank</option>
-             <option>will</option>
-             <option>will not</option>
+             <option>Yes</option>
+             <option>No</option>
            </select>
            <div class="select" tabindex="0">
              <span class="value">blank</span>
              <ul class="optList hidden">
-               <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
-               <li class="option">&nbsp;will&nbsp;</li>
-               <li class="option">&nbsp;will not&nbsp;</li>
+               <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
+               <li class="option">Yes</li>
+               <li class="option">No</li>
              </ul>
            </div>
-
-           <p class="text-copy">be needing transport from the ceremony to The Field.&nbsp;</p>
         </div>
 
-        <div class="form-inline">
-          <p class="text-copy">There will be</p>
-
-          <select id="guestNumber" data-guest-amount="null" class="form-replaced" name="guestAmount">
-            <option class="filler">blank</option>
-            <option >one</option>
-            <option >two</option>
-            <option >three</option>
-            <option >four</option>
-            <option >five</option>
-          </select>
-          <div class="select" tabindex="0">
-            <span class="value">__</span>
-            <ul class="optList hidden">
-              <li class="option filler">&nbsp;<span class="text-glyph glyph-lg">&#xe008;</span>&nbsp;</li>
-              <li data-guestAmount="1" class="option guestNumber">&nbsp;just me</li>
-              <li data-guestAmount="2" class="option guestNumber">&nbsp;two <span class="filler">of us</span></li>
-              <li data-guestAmount="3" class="option guestNumber">&nbsp;three <span class="filler">of us</span></li>
-              <li data-guestAmount="4" class="option guestNumber">&nbsp;four <span class="filler">of us</span></li>
-            </ul>
+        <div class="form">
+          <p class="text-copy">Please select each invitee's preference for meals.</p>
+          <div id="rsvp-meal" class="form-hidden meal-form">
+            <div id="rsvp-meat" class="meal-name text-copy">
+              <p class="text-copy">Guest 1</p>
+            </div>
+            <div id="rsvp-meat" class="input-container meal-option">
+              <label class="text-copy" for="meat">Meat</label>
+              <input class="meal-input" type="radio" name="meal1" value="meat">
+              <label class="text-copy" for="Vegetarian">vegetarian</label>
+              <input class="meal-input" type="radio" name="meal1" value="vegetarian">
+            </div>
           </div>
-          <p class="text-copy">wanting meals in the evening.</p>
-        <div class="form-inline">
-          <textarea class="text-input text-copy" name="message" placeholder="Names of the guests wanting the vegetarian option"></textarea>
-          <textarea class="text-input text-copy" name="message" placeholder="Names of the guests wanting the meat option"></textarea>
         </div>
+
+        <div class="form">
+          <p class="text-copy">Please also include any food allergies that we need to be aware of with the name(s) of the respective invitee(s) below.</p>
+          <textarea class="text-input text-copy" name="diet" placeholder="Please include allergy information here."></textarea>
+        </div>
+
+
+
+
 
         <input class="submitButton text-md-title" type="submit" value="Send">
+
       </form>
+    </div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
