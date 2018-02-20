@@ -6,7 +6,7 @@
 }
 
 .column {
-  width: 95%;
+  width: 300px;
 
 }
 
@@ -57,22 +57,22 @@ ul.split-list{
   height: 82px;
 }
 .faq-showing#parking-content {
-  height: 442px;
+  height: 538px;
 }
 .faq-showing#alt-travel-content {
-  height: 226px;
+  height: 274px;
 }
 .faq-showing#accommodation-content {
-  height: 302px;
+  height: 350px;
 }
 .faq-showing#prat-content {
-  height: 106px;
+  height: 130px;
 }
 .faq-showing#footwear-content {
-  height: 154px;
+  height: 178px;
 }
 .faq-showing#people-content {
-  height: 394px;
+  height: 418px;
 }
 .faq-showing#faq-rsvp-content {
   height: 58px;

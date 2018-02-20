@@ -16,23 +16,24 @@ var faqButton;
 });
 
 function faqButtonClick() {
-  // console.log(faqButtons[0].classList);
   var contentTitle = document.getElementById(faqButton);
   var content = contentTitle.nextElementSibling.classList;
   for (var i = 0; i < faqButtons.length; i++) {
     var faqContent = faqButtons[i].nextElementSibling.classList;
 
 
-    if (faqContent.contains('faq-showing') && faqButtons[i].id !== faqButton) {
-      console.log(faqButtons[i].id);
-      console.log(faqButton);
-      faqContent.replace('faq-showing', 'faq-hidden');
+    if (faqContent.contains('faq-showing') == true && faqButtons[i].id !== faqButton) {
+      faqContent.remove('faq-showing');
+      faqContent.add('faq-hidden');
     };
   };
-  if (content.contains('faq-showing')) {
-    content.replace('faq-showing', 'faq-hidden');
-  } else if (content.contains('faq-hidden')) {
-    content.replace('faq-hidden', 'faq-showing')
+  if (content.contains('faq-showing') == true) {
+    content.add('faq-hidden');
+    content.remove('faq-showing');
+  } else if (content.contains('faq-hidden') == true) {
+    console.log(content);
+    content.add('faq-showing');
+    content.remove('faq-hidden');
   };
 //   if (rsvpForm.classList.contains('form-hidden')) {
 //   rsvpForm.classList.replace('form-hidden','form-showing');

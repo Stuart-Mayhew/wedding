@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="MyFontsWebfontsKit/MyFontsWebfontsKit.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <title>Index</title>
+    <title>M&amp;V | Home</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html">M<span class="navbar-amp">&</span>V</a>
+      <a class="navbar-brand" href="index.html">M<span class="navbar-amp">&amp;</span>V</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,16 +23,16 @@
             <a class="nav-link text-md-title" href="#">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-md-title" href="views/venues.html">Venues</a>
+            <a class="nav-link text-md-title" href="venues.html">Venues</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-md-title" href="views/gifts.html">Gifts</a>
+            <a class="nav-link text-md-title" href="gifts.html">Gifts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-md-title" href="views/helpful-hints.html">Helpful Hints</a>
+            <a class="nav-link text-md-title" href="helpful-hints.html">Helpful Hints</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-md-title" href="views/photographs.html">Photographs</a>
+            <a class="nav-link text-md-title" href="photographs.html">Photographs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-md-title rsvp-button" href="#">RSVP</a>
@@ -66,11 +66,11 @@
     <div id="rsvp" class="container-fluid px-0 fixed-bottom no-widget">
       <h2 id="rsvp-button-tab" class="text-md-title fixed-bottom form-title my-0 px-3 py-1 rsvp-button">RSVP</h2>
       <div class="form-top-bar"></div>
-      <form id="rsvp-form" action="createRSVP" method="post" class="form px-3 form-hidden">
+      <form id="rsvp-form" action="createRSVP.php" method="POST" class="form px-3 form-hidden">
         <div id="rsvp-names" class="form">
           <p class="text-copy">Name(s) of Invitee(s):</p>
           <div class="input-container name-container">
-            <input id="original-name-input" class="text-input text-copy original-input name" name="name" placeholder="Full Name" type="text" required>
+            <input id="original-name-input" class="text-input text-copy original-input name " name="name[]" placeholder="Full Name" type="text" required>
           </div>
           <div id="name-plus-minus-container" class="plus-minus-container">
             <i id="name-plus-alt" class="text-copy glyph-plus button">Add&nbsp;Guest</i>
@@ -82,13 +82,13 @@
 
           <p class="text-copy">Are you able to attend?</p>
 
-          <select class="form-replaced" name="attendance">
-             <option class="filler">blank</option>
+          <select class="form-replaced" name="attendance" required>
+             <option class="filler"></option>
              <option>Yes</option>
              <option>No</option>
            </select>
            <div class="select" tabindex="0">
-             <span class="value">blank</span>
+             <span class="value"></span>
              <ul class="optList hidden">
                <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
                <li id="yes-attend" class="option">Yes</li>
@@ -104,16 +104,16 @@
           <p class="text-copy">Type of Invitation.</p>
 
           <select class="form-replaced" name="invitationType">
-            <option class="filler">blank</option>
+            <option class="filler"></option>
             <option >ceremony & reception</option>
             <option >evening only</option>
           </select>
           <div class="select " tabindex="0">
-            <span id="invite-type" class="value">blank</span>
+            <span id="invite-type" class="value"></span>
             <ul class="optList hidden">
               <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
-              <li id="ceremony-attend" class="option">Ceremony & reception.</li>
-              <li id="evening-attend"class="option">Evening only.</li>
+              <li id="ceremony-attend" class="option">Ceremony & Reception.</li>
+              <li id="evening-attend" class="option">Evening only.</li>
             </ul>
           </div>
         </div>
@@ -121,12 +121,12 @@
         <div class="form">
           <p class="text-copy">Will You Need Transport From the Ceremony to The Field?</p>
           <select class="form-replaced" name="guestTransport">
-             <option class="filler">blank</option>
+             <option class="filler"></option>
              <option>Yes</option>
              <option>No</option>
            </select>
            <div class="select" tabindex="0">
-             <span class="value">blank</span>
+             <span class="value"></span>
              <ul class="optList hidden">
                <li class="option filler"><span class="text-glyph glyph-q icon-flipped">&#x2026;</span></li>
                <li class="option">Yes</li>

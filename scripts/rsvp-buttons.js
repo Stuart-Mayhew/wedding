@@ -69,6 +69,7 @@ function plusButtonClick() {
     newName.setAttribute('class', 'text-input text-copy name');
     newName.setAttribute('placeholder', 'Full Name');
     newName.setAttribute('type', 'text');
+    newName.setAttribute('name', 'name[]');
 
     if (newName.addEventListener) {
       newName.addEventListener('change', function(){
