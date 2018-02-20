@@ -9,7 +9,6 @@
 }
 .charity {
   width: 100%;
-
 }
 .charity-img-link {
   width: 75%;
@@ -17,6 +16,7 @@
 }
 .charity-img {
   width: 100%;
+  margin: 1rem 0;
 }
 
 @media only screen and (min-width:769px) {

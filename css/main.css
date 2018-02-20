@@ -98,15 +98,15 @@ sup {
 .flex {
   display: flex;
 }
-.flex-space-between {
+/* .flex-space-between {
   justify-content: space-between;
 }
 .flex-space-around {
   justify-content: space-around;
-}
+}*/
 .flex-center {
   justify-content: center;
-}
+}/*
 .flex-left {
   align-items: flex-start;
 }
@@ -118,13 +118,13 @@ sup {
 }
 .flex-align-center {
   align-items: center;
-}
+}*/
 .flex-column {
   flex-direction: column;
-}
+}/*
 .flex-row {
   flex-direction: row;
-}
+}*/
 .flex-reverse {
   flex-direction: row-reverse;
 }
@@ -212,6 +212,7 @@ nav a {
 }
 
 .banner-headings {
+    justify-content: center;
     border-bottom: 5px dotted #82ABD1;
     flex-direction: row;
     padding-bottom: 1rem;
